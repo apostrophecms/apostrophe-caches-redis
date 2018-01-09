@@ -29,3 +29,7 @@ See the [redis npm module documentation](https://www.npmjs.com/package/redis) fo
 ## Sessions in Redis
 
 You can do that too, and it greatly reduces the load on MongoDB. You don't need this module for that. See [storing sessions in Redis](http://apostrophecms.org/docs/tutorials/howtos/storing-sessions-in-redis.html).
+
+## Changelog
+
+2.1.0: promise support. The `get`, `set` and `clear` methods of caches now return promises if no callback is given, matching the behavior of Apostrophe's core cache.

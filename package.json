@@ -1,10 +1,10 @@
 {
   "name": "apostrophe-caches-redis",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Redis-based cache for the Apostrophe CMS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,11 @@
   },
   "homepage": "https://github.com/punkave/apostrophe-cache-redis#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "redis": "^2.7.1"
   },
   "devDependencies": {
     "mocha": "^3.0.0",
     "apostrophe": "^2.0.0"
-  },
-  "scripts": {
-    "test": "mocha test/test.js"
   }
 }
