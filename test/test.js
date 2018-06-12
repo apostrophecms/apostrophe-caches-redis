@@ -10,6 +10,7 @@ describe('Apostrophe cache implementation in redis', function() {
   it('initializes apostrophe', function(done) {
     this.timeout(5000);
     apos = require('apostrophe')({
+      shortName: 'apostrophe-caches-redis-test',
       testModule: true,
       modules: {
         'apostrophe-caches-redis': {}
