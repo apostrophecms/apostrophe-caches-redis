@@ -7,6 +7,11 @@ describe('Apostrophe cache implementation in redis', function() {
   var apos;
   var cache1;
   var cache2;
+
+  after(function(done) {
+    require('apostrophe/test-lib/util').destroy(apos, done);
+  });
+
   it('initializes apostrophe', function(done) {
     this.timeout(5000);
     apos = require('apostrophe')({
@@ -179,9 +184,8 @@ describe('Apostrophe cache implementation in redis', function() {
     return cache1.set('timeout', 'timeout', 1);
   });
   it('can fetch that key within the 1-second timeout with promises', function() {
-    return cache1.get('timeout', function(value) {
+    return cache1.get('timeout').then(function(value) {
       assert(value === 'timeout');
-      done();
     });
   });
   it('cannot fetch that key after 2 seconds with promises', function() {
