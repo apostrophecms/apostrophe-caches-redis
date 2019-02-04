@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-caches-redis",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Redis-based cache for the Apostrophe CMS",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/punkave/apostrophe-cache-redis#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
+    "bluebird": "^3.5.3",
     "redis": "^2.8.0"
   },
   "devDependencies": {
-    "apostrophe": "^2.0.0",
-    "mocha": "^3.5.3"
+    "apostrophe": "^2.75.1",
+    "mocha": "^5.0.0"
   }
 }

@@ -10,6 +10,10 @@ module.exports = {
   improve: 'apostrophe-caches',
 
   construct: function(self, options) {
+    self.on('apostrophe:destroy', 'closeRedisConnection', function() {
+      self.client.stream.removeAllListeners();
+      self.client.stream.destroy();
+    });
     // Replace the apostrophe-caches implementation of getCollection in a bc way
     self.getCollection = function(callback) {
       var redisOptions = options.redis || {};
