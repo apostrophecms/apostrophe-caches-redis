@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/punkave/apostrophe-cache-redis.git"
+    "url": "git+https://github.com/apostrophecms/apostrophe-cache-redis.git"
   },
   "keywords": [
     "apostrophe",
@@ -18,9 +18,9 @@
   "author": "P'unk Avenue LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/punkave/apostrophe-cache-redis/issues"
+    "url": "https://github.com/apostrophecms/apostrophe-cache-redis/issues"
   },
-  "homepage": "https://github.com/punkave/apostrophe-cache-redis#readme",
+  "homepage": "https://github.com/apostrophecms/apostrophe-cache-redis#readme",
   "dependencies": {
     "bluebird": "^3.5.3",
     "redis": "^2.8.0"
