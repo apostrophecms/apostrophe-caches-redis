@@ -28,6 +28,12 @@ module.exports = {
       return setImmediate(callback);
     };
 
+    // Override the ensureIndexes method, which is not needed since we are
+    // not using mongo collections.
+    self.ensureIndexes = function(callback) {
+      return callback(null);
+    }
+
     self.constructCache = function(name) {
 
       return {
@@ -139,4 +145,3 @@ module.exports = {
     };
   }
 };
-
