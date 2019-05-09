@@ -28,7 +28,7 @@ module.exports = {
       return setImmediate(callback);
     };
 
-    // Override the ensureIndex method, which is not needed since we are
+    // Override the ensureIndexes method, which is not needed since we are
     // not using mongo collections.
     self.ensureIndexes = function(callback) {
       return callback(null);
