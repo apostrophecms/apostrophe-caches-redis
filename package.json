@@ -4,7 +4,7 @@
   "description": "Redis-based cache for the Apostrophe CMS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha test/test.js && eslint ."
   },
   "repository": {
     "type": "git",
