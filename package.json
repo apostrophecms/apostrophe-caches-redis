@@ -15,7 +15,7 @@
     "cache",
     "redis"
   ],
-  "author": "P'unk Avenue LLC",
+  "author": "Apostrophe Technologies",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apostrophecms/apostrophe-cache-redis/issues"
@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "apostrophe": "^2.75.1",
-    "mocha": "^5.0.0"
+    "eslint": "^7.8.1",
+    "eslint-config-apostrophe": "^3.4.0",
+    "mocha": "^8.1.3"
   }
 }
