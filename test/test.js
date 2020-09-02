@@ -149,36 +149,36 @@ describe('Apostrophe cache implementation in redis', function() {
   });
   it('can retrieve key from cache 1 with promises', function() {
     return cache1.get(1000)
-    .then(function(val) {
-      assert(val === 1000);
-    });
+      .then(function(val) {
+        assert(val === 1000);
+      });
   });
   it('can retrieve key from cache 2 with promises', function() {
     return cache2.get(3000)
-    .then(function(val) {
-      assert(val === 3000);
-    });
+      .then(function(val) {
+        assert(val === 3000);
+      });
   });
   it('cannot retrieve cache 2 key from key 1 (namespacing) with promises', function() {
     return cache1.get(3000)
-    .then(function(val) {
-      assert(!val);
-    });
+      .then(function(val) {
+        assert(!val);
+      });
   });
   it('can clear a cache with promises', function() {
     return cache1.clear();
   });
   it('cannot fetch a key from a cleared cache with promises', function() {
     return cache1.get(1000)
-    .then(function(val) {
-      assert(!val);
-    });
+      .then(function(val) {
+        assert(!val);
+      });
   });
   it('can fetch a key from an uncleared cache with promises', function() {
     return cache2.get(3000)
-    .then(function(val) {
-      assert(val === 3000);
-    });
+      .then(function(val) {
+        assert(val === 3000);
+      });
   });
   it('can store a key with a 1-second timeout with promises', function() {
     return cache1.set('timeout', 'timeout', 1);
@@ -191,12 +191,11 @@ describe('Apostrophe cache implementation in redis', function() {
   it('cannot fetch that key after 2 seconds with promises', function() {
     this.timeout(5000);
     return Promise.delay(2000)
-    .then(function() {
-      return cache1.get('timeout')
-    })
-    .then(function(val) {
-      assert(!val);
-    });
+      .then(function() {
+        return cache1.get('timeout');
+      })
+      .then(function(val) {
+        assert(!val);
+      });
   });
 });
-
