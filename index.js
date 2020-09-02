@@ -2,7 +2,7 @@
 //
 // unit tests
 
-var redis = require("redis");
+var redis = require('redis');
 var Promise = require('bluebird');
 
 module.exports = {
@@ -32,7 +32,7 @@ module.exports = {
     // not using mongo collections.
     self.ensureIndexes = function(callback) {
       return callback(null);
-    }
+    };
 
     self.constructCache = function(name) {
 
@@ -84,7 +84,7 @@ module.exports = {
             lifetime = 0;
             return Promise.promisify(body)();
           } else if (arguments.length === 3) {
-            if (typeof(lifetime) === 'function') {
+            if (typeof (lifetime) === 'function') {
               callback = lifetime;
               lifetime = 0;
               return body(callback);
