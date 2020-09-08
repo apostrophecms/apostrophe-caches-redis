@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2.1.3 (2020-09-09)
-- Updates `mocha` for security vulnerabilities.
+- Updates `mocha` and `apostrophe` for security vulnerabilities.
 - Adds ESLint to the test script.
 
 ## 2.1.2
