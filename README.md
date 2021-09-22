@@ -28,5 +28,5 @@ See the [redis npm module documentation](https://www.npmjs.com/package/redis) fo
 
 ## Sessions in Redis
 
-You can do that too, and it greatly reduces the load on MongoDB. You don't need this module for that. See [storing sessions in Redis](http://apostrophecms.org/docs/tutorials/howtos/storing-sessions-in-redis.html).
+You can do that too, and it greatly reduces the load on MongoDB. You don't need this module for that. See [storing sessions in Redis](https://v2.docs.apostrophecms.org/howtos/storing-sessions-in-redis.html).
 
