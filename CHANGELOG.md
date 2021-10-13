@@ -1,10 +1,10 @@
 # Changelog
 
-## Unreleased
+## 2.1.4 - 2021-10-13
 
 - Fixes a broken documentation link in the README. Thanks to [Antoine Beauvais-Lacasse](https://github.com/beaulac) for the contribution.
 
-## 2.1.3 (2020-09-09)
+## 2.1.3 - 2020-09-09
 - Updates `mocha` and `apostrophe` for security vulnerabilities.
 - Adds ESLint to the test script.
 
