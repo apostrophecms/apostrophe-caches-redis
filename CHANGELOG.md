@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fixed redis vulnerability reported by security scanners. Due to the way Apostrophe constructs keys there was no actual vulnerability in practice.
+
 ## 2.1.4 - 2021-10-13
 
 - Fixes a broken documentation link in the README. Thanks to [Antoine Beauvais-Lacasse](https://github.com/beaulac) for the contribution.
