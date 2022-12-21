@@ -27,7 +27,7 @@ describe('Apostrophe cache implementation in redis', function() {
     });
   });
   it('initializes a redis client', function() {
-    assert(apos.caches);
+    assert(apos.caches.client);
   });
   it('can return a cache', function() {
     cache1 = apos.caches.get('cache1');
