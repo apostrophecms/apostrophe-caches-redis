@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Fixed redis vulnerability reported by security scanners. Due to the way Apostrophe constructs keys there was no actual vulnerability in practice..
+- Fixed redis vulnerability reported by security scanners. Due to the way Apostrophe constructs keys there was no actual vulnerability in practice.
 
 ## 2.1.4 - 2021-10-13
 
