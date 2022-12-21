@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fixed vulnerabilty by upgrading redis package.
+
 ## 2.1.4 - 2021-10-13
 
 - Fixes a broken documentation link in the README. Thanks to [Antoine Beauvais-Lacasse](https://github.com/beaulac) for the contribution.
