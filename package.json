@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-caches-redis",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Redis-based cache for the Apostrophe CMS",
   "main": "index.js",
   "scripts": {
