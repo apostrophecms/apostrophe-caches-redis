@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.1.5 - 2023-02-01
 
 - Fixed redis vulnerability reported by security scanners. Due to the way Apostrophe constructs keys there was no actual vulnerability in practice.
 
