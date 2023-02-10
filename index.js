@@ -10,9 +10,11 @@ module.exports = {
   improve: 'apostrophe-caches',
 
   construct: function(self, options) {
+    //The removeAllListeners and destroy methods were used in earlier versions of the redis to close a connection.
+    //However, in recent versions of the redis, the recommended method for closing a connection
+    //is to call the quit method on the Redis client instance.
     self.on('apostrophe:destroy', 'closeRedisConnection', function() {
-      self.client.stream.removeAllListeners();
-      self.client.stream.destroy();
+      self.client.quit();
     });
     // Replace the apostrophe-caches implementation of getCollection in a bc way
     self.getCollection = function(callback) {
@@ -32,6 +34,20 @@ module.exports = {
     // not using mongo collections.
     self.ensureIndexes = function(callback) {
       return callback(null);
+    };
+
+    // Override removeBadIndexMigration function, which is not needed since we are
+    // not using mongo collections
+    self.removeBadIndexMigration = function() {
+      self.on('apostrophe:modulesReady', 'addRemoveBadIndexMigration', function() {
+        try {
+          self.apos.migrations.add(self.__meta.name + '.removeBadIndex', async function() {
+            // remove the code that references the "indexes" property
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      });
     };
 
     self.constructCache = function(name) {
