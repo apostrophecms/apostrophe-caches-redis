@@ -1,6 +1,6 @@
 # Changelog
 
-## UNRELEASED
+## 2.1.6 - 2023-02-17
 
 - Fixed the `removeBadIndexMigration` migration to not cause an error due to the lack of collections when using redis. Thanks to [Felix](https://github.com/felixlberg).
 - Changes method of closing the redis connection to use `quit()` in place of the soon to be deprecated `removeAllListeners()` and `destroy()` methods.  Thanks to [Felix](https://github.com/felixlberg).
